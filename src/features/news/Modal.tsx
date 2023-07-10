@@ -20,10 +20,10 @@ const ModalComponent: React.FC<Props> = ({ noticia, onClose }) => {
   return (
     <ContenedorModal>
       <TarjetaModal>
-        <CloseButton onClick={onClose}>
+        <CloseButton onClick={onClose} data-testid='close-modal-button'>
           <img src={Close} alt="close-button" />
-        </CloseButton>
-        <ImagenModal src={noticia.imagen} alt="news-image" />
+        </CloseButton >
+        <ImagenModal src={noticia.imagen} alt="news-image" data-testid='new-image' />
         <CotenedorTexto>
           {noticia.esPremium ? (
             <>
